@@ -43,7 +43,7 @@ with app.app_context():
     db.session.add_all(baked_goods)
     db.session.commit()
     
-    most_expensive_baked_good = rc(baked_goods)
-    most_expensive_baked_good.price = 100
-    db.session.add(most_expensive_baked_good)
-    db.session.commit()
+most_expensive_baked_good = rc(baked_goods)
+most_expensive_baked_good.price = 11  # Set a higher price than the random prices (e.g., 11)
+db.session.add(most_expensive_baked_good)
+db.session.commit()
